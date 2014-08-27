@@ -1,4 +1,4 @@
-# sparkly [![Build Status](https://travis-ci.org/sindresorhus/sparkly.svg?branch=master)](https://travis-ci.org/sindresorhus/sparkly)
+# ![sparkly](https://cloud.githubusercontent.com/assets/170270/4068189/1b47cab0-2e36-11e4-8b75-16b80330147e.gif) [![Build Status](https://travis-ci.org/sindresorhus/sparkly.svg?branch=master)](https://travis-ci.org/sindresorhus/sparkly)
 
 > Generate sparklines ▁▂▃▅▂▇
 
@@ -31,7 +31,7 @@ sparkly([0, 3, 5, '', 4, 3, 4, 10]);
 $ npm install --global sparkly
 ```
 
-```sh
+```
 $ sparkly --help
 
   Usage
