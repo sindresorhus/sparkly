@@ -19,6 +19,6 @@ test('anything other than finite numbers causes holes', function (t) {
 });
 
 test('use the middle tick if data is constant', function (t) {
-	t.assert(sparkly([10, 10, 10, 10, 10]) === '▄▄▄▄▄');
+	t.assert(sparkly([10, 10, 10, 10, 10]) === '▅▅▅▅▅');
 	t.end();
 });

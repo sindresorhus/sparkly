@@ -12,9 +12,9 @@ module.exports = function (numbers) {
 	var max = Math.max.apply(null, finiteNumbers);
 	var f = ((max - min) << 8) / (ticks.length - 1);
 
-	// use the middle tick if data is constant
+	// use a high tick if data is constant
 	if (min === max) {
-		ticks = ticks[3];
+		ticks = [ticks[4]];
 	}
 
 	if (f < 1) {
