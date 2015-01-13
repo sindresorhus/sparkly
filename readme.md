@@ -17,11 +17,11 @@ $ npm install --save sparkly
 var sparkly = require('sparkly');
 
 sparkly([0, 3, 5, 8, 4, 3, 4, 10]);
-//=> ▁▃▄▅▃▃▃▆
+//=> ▁▃▄▇▄▃▄█
 
 // supplying anything other than finite numbers will cause holes
 sparkly([0, 3, 5, '', 4, 3, 4, 10]);
-//=> ▁▃▄ ▃▃▃▆
+//=> ▁▃▄ ▄▃▄█
 ```
 
 
@@ -40,7 +40,7 @@ $ sparkly --help
 
   Example
     sparkly 0 3 5 8 4 3 4 10
-    ▁▃▄▅▃▃▃▆
+    ▁▃▄▇▄▃▄█
 ```
 
 
