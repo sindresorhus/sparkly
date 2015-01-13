@@ -21,11 +21,12 @@ module.exports = function (numbers) {
 			return ' ';
 		}
 
-        var tickIndex = Math.ceil((el / max) * ticks.length) - 1;
+		var tickIndex = Math.ceil((el / max) * ticks.length) - 1;
 
-        if (tickIndex < 0) {
-            tickIndex = 0;
-        }
+		if (tickIndex < 0) {
+			tickIndex = 0;
+		}
+
 		return ticks[tickIndex];
 	}).join('');
 };
