@@ -1,6 +1,6 @@
 {
   "name": "sparkly",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Generate sparklines ▁▂▃▅▂▇",
   "license": "MIT",
   "repository": "sindresorhus/sparkly",
