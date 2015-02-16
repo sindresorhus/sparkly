@@ -37,7 +37,7 @@
     "ascii"
   ],
   "dependencies": {
-    "get-stdin": "^3.0.0",
+    "get-stdin": "^4.0.1",
     "is-finite": "^1.0.0",
     "minimist": "^1.1.0"
   },
