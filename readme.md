@@ -22,6 +22,10 @@ sparkly([0, 3, 5, 8, 4, 3, 4, 10]);
 // supplying anything other than finite numbers will cause holes
 sparkly([0, 3, 5, '', 4, 3, 4, 10]);
 //=> ▁▃▄ ▄▃▄█
+
+// supplying a min max object will change the sparkline range
+sparkly([1, 2, 3, 4, 5], {min: 0, max: 10};
+//=> ▁▂▃▄▄
 ```
 
 
@@ -41,6 +45,10 @@ $ sparkly --help
   Example
     sparkly 0 3 5 8 4 3 4 10
     ▁▃▄▇▄▃▄█
+
+  Example
+    sparkly --min=0 --max=10 1 2 3 4 5
+    ▁▂▃▄▄
 ```
 
 

@@ -22,7 +22,7 @@ function help() {
 }
 
 function init(data) {
-	console.log(sparkly(data));
+	console.log(sparkly(data, argv));
 }
 
 if (argv.version) {
