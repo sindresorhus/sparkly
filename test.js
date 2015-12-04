@@ -10,7 +10,7 @@ test('creates graph', function (t) {
 	t.assert(sparkly([1, 50, 100]) === '▁▄█');
 	t.assert(sparkly([2, 4, 8]) === '▂▄█');
 	t.assert(sparkly([1, 2, 3, 4, 5]) === '▂▄▅▇█');
-    t.assert(sparkly([25, 45]) === '▅█');
+	t.assert(sparkly([25, 45]) === '▅█');
 	t.end();
 });
 
@@ -21,5 +21,12 @@ test('anything other than finite numbers causes holes', function (t) {
 
 test('use the middle tick if data is constant', function (t) {
 	t.assert(sparkly([10, 10, 10, 10, 10]) === '▅▅▅▅▅');
+	t.end();
+});
+
+test('min and max arguments set graph range', function (t) {
+	t.assert(sparkly([1, 2, 3, 4, 5], {min: 0, max: 10}) === '▁▂▃▄▄');
+	t.assert(sparkly([10, 11, 12, 13], {min: 0}) === '▇▇██');
+	t.assert(sparkly([10, 20, 30, 40, 50], {max: 100}) === '▁▂▃▄▄');
 	t.end();
 });
