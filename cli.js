@@ -12,12 +12,15 @@ function help() {
 		'  ' + pkg.description,
 		'',
 		'  Usage',
-		'    sparkly <number> ...',
-		'    echo <number> ... | sparkly',
+		'    sparkly [opts] <number> ...',
+		'    echo [opts] <number> ... | sparkly',
 		'',
 		'  Example',
 		'    sparkly 0 3 5 8 4 3 4 10',
-		'    ▁▃▄▅▃▃▃▆'
+		'    ▁▃▄▅▃▃▃▆',
+
+    '    sparkly --min=0 --max=10 1 2 3 4 5',
+    '    ▁▂▃▄▄'
 	].join('\n'));
 }
 
