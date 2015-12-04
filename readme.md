@@ -39,14 +39,13 @@ $ npm install --global sparkly
 $ sparkly --help
 
   Usage
-    sparkly <number> ...
-    echo <number> ... | sparkly
+    sparkly [opts] <number> ...
+    echo [opts] <number> ... | sparkly
 
   Example
     sparkly 0 3 5 8 4 3 4 10
     ▁▃▄▇▄▃▄█
 
-  Example
     sparkly --min=0 --max=10 1 2 3 4 5
     ▁▂▃▄▄
 ```
