@@ -1,15 +1,16 @@
 'use strict';
 var isFinite = require('is-finite');
 
-module.exports = function (numbers) {
+module.exports = function (numbers, opts) {
 	if (!Array.isArray(numbers)) {
 		throw new TypeError('Expected an array');
 	}
 
 	var ticks = ['▁', '▂', '▃', '▄', '▅', '▆', '▇', '█'];
 	var finiteNumbers = numbers.filter(isFinite);
-	var min = Math.min.apply(null, finiteNumbers);
-	var max = Math.max.apply(null, finiteNumbers);
+  opts = opts || {};
+  var min = opts.min || Math.min.apply(null, finiteNumbers);
+  var max = opts.max || Math.max.apply(null, finiteNumbers);
 
 	// use a high tick if data is constant
 	if (min === max) {
