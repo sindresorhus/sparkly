@@ -10,7 +10,7 @@ test('creates graph', function (t) {
 	t.assert(sparkly([1, 50, 100]) === '▁▄█');
 	t.assert(sparkly([2, 4, 8]) === '▂▄█');
 	t.assert(sparkly([1, 2, 3, 4, 5]) === '▂▄▅▇█');
-    t.assert(sparkly([25, 45]) === '▅█');
+	t.assert(sparkly([25, 45]) === '▅█');
 	t.end();
 });
 
