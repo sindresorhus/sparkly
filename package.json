@@ -9,21 +9,16 @@
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com"
   },
-  "bin": "cli.js",
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "xo && node test.js"
+    "test": "xo && ava"
   },
   "files": [
-    "index.js",
-    "cli.js"
+    "index.js"
   ],
   "keywords": [
-    "cli-app",
-    "cli",
-    "bin",
     "spark",
     "sparkly",
     "line",
@@ -36,12 +31,10 @@
     "ascii"
   ],
   "dependencies": {
-    "get-stdin": "^4.0.1",
-    "is-finite": "^1.0.0",
-    "minimist": "^1.1.0"
+    "is-finite": "^1.0.0"
   },
   "devDependencies": {
-    "ava": "^0.7.0",
-    "xo": "^0.11.2"
+    "ava": "*",
+    "xo": "*"
   }
 }

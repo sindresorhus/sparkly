@@ -4,50 +4,61 @@
 
 JavaScript port of [spark.sh](https://github.com/holman/spark).
 
-Some [cool use-cases](https://github.com/holman/spark/wiki/Wicked-Cool-Usage).
+[Some cool use-cases.](https://github.com/holman/spark/wiki/Wicked-Cool-Usage)
+
+
+## Install
+
+```
+$ npm install --save sparkly
+```
 
 
 ## Usage
-
-```sh
-$ npm install --save sparkly
-```
 
 ```js
 const sparkly = require('sparkly');
 
 sparkly([0, 3, 5, 8, 4, 3, 4, 10]);
-//=> ▁▃▄▇▄▃▄█
+//=> '▁▃▄▇▄▃▄█'
 
-// supplying anything other than finite numbers will cause holes
+// specifying anything other than finite numbers will cause holes
 sparkly([0, 3, 5, '', 4, 3, 4, 10]);
-//=> ▁▃▄ ▄▃▄█
+//=> '▁▃▄ ▄▃▄█'
 
-// supplying a min max object will change the sparkline range
-sparkly([1, 2, 3, 4, 5], {min: 0, max: 10};
-//=> ▁▂▃▄▄
+// specifying a min max object will change the sparkline range
+sparkly([1, 2, 3, 4, 5], {min: 0, max: 10});
+//=> '▁▂▃▄▄'
 ```
 
+## API
 
-## CLI
+### sparkly(numbers, [options])
 
-```sh
-$ npm install --global sparkly
-```
+#### numbers
 
-```
-$ sparkly --help
+Type: `array` of `number`
 
-  Usage
-    sparkly <number> ...
-    echo <number> ... | sparkly
+Numbers to create the sparkline from.
 
-  Examples
-    sparkly 0 3 5 8 4 3 4 10
-    ▁▃▄▇▄▃▄█
-    sparkly --min=0 --max=10 1 2 3 4 5
-    ▁▂▃▄▄
-```
+#### options
+
+##### min
+
+Type: `number`
+
+Minimum range.
+
+##### max
+
+Type: `number`
+
+Maximum range.
+
+
+## Related
+
+- [sparkly-cli](https://github.com/sindresorhus/sparkly-cli) - CLI for this module
 
 
 ## License
