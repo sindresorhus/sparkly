@@ -14,7 +14,7 @@ $ npm install --save sparkly
 ```
 
 ```js
-var sparkly = require('sparkly');
+const sparkly = require('sparkly');
 
 sparkly([0, 3, 5, 8, 4, 3, 4, 10]);
 //=> ▁▃▄▇▄▃▄█
