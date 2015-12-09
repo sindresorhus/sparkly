@@ -1,6 +1,6 @@
 import test from 'ava';
 import fn from './';
-var colors = require('ansi-256-colors');
+import colors from 'ansi-256-colors';
 
 test('creates graph', t => {
 	t.is(fn([1, 5, 22, 13, 5]), '▁▂█▅▂');
@@ -28,5 +28,5 @@ test('min and max arguments set graph range', t => {
 });
 
 test('colored graph', t => {
-	t.is(fn([1, 2, 3, 4, 5, 6, 7, 8], {style: 'fire'}), colors.fg.getRgb(5, 5, 3) + '▁' + colors.fg.getRgb(5, 5, 4) + '▂' + colors.fg.getRgb(5, 5, 0) + '▃' + colors.fg.getRgb(5, 4, 0) + '▄' + colors.fg.getRgb(5, 3, 0) + '▅' + colors.fg.getRgb(5, 2, 0) + '▆' + colors.fg.getRgb(5, 1, 0) + '▇' + colors.fg.getRgb(5, 0, 0) + '█');
+	t.is(fn([1], {style: 'fire'}), colors.fg.getRgb(5, 5, 3) + '▅');
 });

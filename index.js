@@ -10,13 +10,10 @@ module.exports = function (numbers, opts) {
 	opts = opts || {};
 
 	var ticks = ['▁', '▂', '▃', '▄', '▅', '▆', '▇', '█'];
+	var style = [colors.fg.getRgb(5, 5, 3), colors.fg.getRgb(5, 5, 4), colors.fg.getRgb(5, 5, 0), colors.fg.getRgb(5, 4, 0), colors.fg.getRgb(5, 3, 0), colors.fg.getRgb(5, 2, 0), colors.fg.getRgb(5, 1, 0), colors.fg.getRgb(5, 0, 0)];
 	var finiteNumbers = numbers.filter(isFinite);
 	var min = opts.min || Math.min.apply(null, finiteNumbers);
 	var max = opts.max || Math.max.apply(null, finiteNumbers);
-	var style = opts.style || '';
-	if (style === 'fire') {
-		ticks = [colors.fg.getRgb(5, 5, 3) + '▁', colors.fg.getRgb(5, 5, 4) + '▂', colors.fg.getRgb(5, 5, 0) + '▃', colors.fg.getRgb(5, 4, 0) + '▄', colors.fg.getRgb(5, 3, 0) + '▅', colors.fg.getRgb(5, 2, 0) + '▆', colors.fg.getRgb(5, 1, 0) + '▇', colors.fg.getRgb(5, 0, 0) + '█'];
-	}
 
 	// use a high tick if data is constant
 	if (min === max) {
@@ -34,6 +31,6 @@ module.exports = function (numbers, opts) {
 			tickIndex = 0;
 		}
 
-		return ticks[tickIndex];
+		return (opts.style === 'fire' ? style[tickIndex] : '') + ticks[tickIndex];
 	}).join('');
 };
