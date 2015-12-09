@@ -29,7 +29,13 @@ sparkly([0, 3, 5, '', 4, 3, 4, 10]);
 // specifying a min max object will change the sparkline range
 sparkly([1, 2, 3, 4, 5], {min: 0, max: 10});
 //=> '▁▂▃▄▄'
+
+// specifying a style object will change the sparkline color
+sparkly([1, 2, 3, 4, 5], {style: 'fire'});
+//=>'▁▂▃▄▅▆▇█'
 ```
+
+colored sparkline will look like this: ![sparkly](http://i.imgur.com/5SUQ4mz.png)
 
 ## API
 
