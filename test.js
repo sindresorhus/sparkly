@@ -1,5 +1,6 @@
 import test from 'ava';
 import fn from './';
+import colors from 'ansi-256-colors';
 
 test('creates graph', t => {
 	t.is(fn([1, 5, 22, 13, 5]), '▁▂█▅▂');
@@ -24,4 +25,8 @@ test('min and max arguments set graph range', t => {
 	t.is(fn([1, 2, 3, 4, 5], {min: 0, max: 10}), '▁▂▃▄▄');
 	t.is(fn([10, 11, 12, 13], {min: 0}), '▇▇██');
 	t.is(fn([10, 20, 30, 40, 50], {max: 100}), '▁▂▃▄▄');
+});
+
+test('colored graph', t => {
+	t.is(fn([1], {style: 'fire'}), `${colors.fg.getRgb(5, 5, 3)}▅${colors.reset}`);
 });

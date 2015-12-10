@@ -1,5 +1,6 @@
 'use strict';
 var isFinite = require('is-finite');
+var colors = require('ansi-256-colors');
 
 module.exports = function (numbers, opts) {
 	if (!Array.isArray(numbers)) {
@@ -9,6 +10,7 @@ module.exports = function (numbers, opts) {
 	opts = opts || {};
 
 	var ticks = ['▁', '▂', '▃', '▄', '▅', '▆', '▇', '█'];
+	var color = [[5, 5, 3], [5, 5, 4], [5, 5, 0], [5, 4, 0], [5, 3, 0], [5, 2, 0], [5, 1, 0], [5, 0, 0]];
 	var finiteNumbers = numbers.filter(isFinite);
 	var min = opts.min || Math.min.apply(null, finiteNumbers);
 	var max = opts.max || Math.max.apply(null, finiteNumbers);
@@ -27,6 +29,10 @@ module.exports = function (numbers, opts) {
 
 		if (tickIndex < 0) {
 			tickIndex = 0;
+		}
+
+		if (opts.style === 'fire') {
+			return colors.fg.getRgb.apply(colors.fg, color[tickIndex]) + ticks[tickIndex] + colors.reset;
 		}
 
 		return ticks[tickIndex];
