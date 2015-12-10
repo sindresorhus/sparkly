@@ -30,10 +30,12 @@ sparkly([0, 3, 5, '', 4, 3, 4, 10]);
 sparkly([1, 2, 3, 4, 5], {min: 0, max: 10});
 //=> '▁▂▃▄▄'
 
-// specifying a style object will change the sparkline color
-sparkly([1, 2, 3, 4, 5], {style: 'fire'});
-//=>'▁▂▃▄▅▆▇█'
+// specifying a style option will change the sparkline color
+sparkly([1, 2, 3, 4, 5, 6, 7, 8], {style: 'fire'});
+// ↓
 ```
+
+<img src="screenshot.png" width="383">
 
 
 ## API
@@ -62,9 +64,10 @@ Maximum range.
 
 ##### style
 
-Type: `string`
+Type: `string`  
+Values: `'fire'`
 
-Style(color) for sparklines.
+Style for the sparklines.
 
 
 ## Related

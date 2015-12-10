@@ -10,7 +10,7 @@ module.exports = function (numbers, opts) {
 	opts = opts || {};
 
 	var ticks = ['▁', '▂', '▃', '▄', '▅', '▆', '▇', '█'];
-	var color = [[5, 5, 3], [5, 5, 4], [5, 5, 0], [5, 4, 0], [5, 3, 0], [5, 2, 0], [5, 1, 0], [5, 0, 0]];
+	var color = [[5, 5, 4], [5, 5, 3], [5, 5, 0], [5, 4, 0], [5, 3, 0], [5, 2, 0], [5, 1, 0], [5, 0, 0]];
 	var finiteNumbers = numbers.filter(isFinite);
 	var min = opts.min || Math.min.apply(null, finiteNumbers);
 	var max = opts.max || Math.max.apply(null, finiteNumbers);
