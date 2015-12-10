@@ -28,5 +28,5 @@ test('min and max arguments set graph range', t => {
 });
 
 test('colored graph', t => {
-	t.is(fn([1], {style: 'fire'}), colors.fg.getRgb(5, 5, 3) + '▅' + colors.reset);
+	t.is(fn([1], {style: 'fire'}), `${colors.fg.getRgb(5, 5, 3)}▅${colors.reset}`);
 });

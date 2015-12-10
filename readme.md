@@ -61,6 +61,12 @@ Type: `number`
 
 Maximum range.
 
+##### style
+
+Type: `string`
+
+Style(color) for sparklines.
+
 
 ## Related
 
