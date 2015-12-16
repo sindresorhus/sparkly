@@ -25,6 +25,7 @@ test('use the middle tick if data is constant', t => {
 });
 
 test('min and max arguments set graph range', t => {
+	t.is(fn([1], {min: 0, max: 1}), '█');
 	t.is(fn([1, 2, 3, 4, 5], {min: 0, max: 10}), '▁▂▃▄▄');
 	t.is(fn([10, 11, 12, 13], {min: 0}), '▇▇██');
 	t.is(fn([10, 20, 30, 40, 50], {max: 100}), '▁▂▃▄▄');
