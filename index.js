@@ -15,8 +15,8 @@ module.exports = function (numbers, opts) {
 	var min = typeof opts.min === 'number' ? opts.min : Math.min.apply(null, finiteNumbers);
 	var max = typeof opts.max === 'number' ? opts.max : Math.max.apply(null, finiteNumbers);
 
-	// use a high tick if data is constant
-	if (min === max) {
+	// use a high tick if data is constant and max is not equal to 0
+	if (min === max && max !== 0) {
 		ticks = [ticks[4]];
 	}
 
@@ -27,7 +27,7 @@ module.exports = function (numbers, opts) {
 
 		var tickIndex = Math.ceil((el / max) * ticks.length) - 1;
 
-		if (tickIndex < 0) {
+		if (max === 0 || tickIndex < 0) {
 			tickIndex = 0;
 		}
 

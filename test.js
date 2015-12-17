@@ -24,6 +24,10 @@ test('use the middle tick if data is constant', t => {
 	t.is(fn([10, 10, 10, 10, 10]), '▅▅▅▅▅');
 });
 
+test('use the lowest tick if data is all 0', t => {
+	t.is(fn([0, 0, 0, 0, 0]), '▁▁▁▁▁');
+});
+
 test('min and max arguments set graph range', t => {
 	t.is(fn([1], {min: 0, max: 1}), '█');
 	t.is(fn([1, 2, 3, 4, 5], {min: 0, max: 10}), '▁▂▃▄▄');
