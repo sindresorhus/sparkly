@@ -1,41 +1,40 @@
 {
-  "name": "sparkly",
-  "version": "3.1.2",
-  "description": "Generate sparklines ▁▂▃▅▂▇",
-  "license": "MIT",
-  "repository": "sindresorhus/sparkly",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "spark",
-    "sparkly",
-    "line",
-    "sparkline",
-    "sparklines",
-    "unicode",
-    "data",
-    "graph",
-    "plot",
-    "ascii"
-  ],
-  "dependencies": {
-    "ansi-256-colors": "^1.1.0",
-    "is-finite": "^1.0.0"
-  },
-  "devDependencies": {
-    "ava": "*",
-    "xo": "*"
-  }
+	"name": "sparkly",
+	"version": "3.1.2",
+	"description": "Generate sparklines `▁▂▃▅▂▇`",
+	"license": "MIT",
+	"repository": "sindresorhus/sparkly",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "sindresorhus.com"
+	},
+	"engines": {
+		"node": ">=6"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"spark",
+		"sparkly",
+		"line",
+		"sparkline",
+		"sparklines",
+		"unicode",
+		"data",
+		"graph",
+		"plot",
+		"ascii"
+	],
+	"dependencies": {
+		"chalk": "^2.4.1"
+	},
+	"devDependencies": {
+		"ava": "*",
+		"xo": "*"
+	}
 }
