@@ -17,12 +17,12 @@ module.exports = (numbers, options = {}) => {
 		ticks = [ticks[4]];
 	}
 
-	return numbers.map(el => {
-		if (!Number.isFinite(el)) {
+	return numbers.map(number => {
+		if (!Number.isFinite(number)) {
 			return ' ';
 		}
 
-		let tickIndex = Math.ceil((el / maximum) * ticks.length) - 1;
+		let tickIndex = Math.ceil((number / maximum) * ticks.length) - 1;
 
 		if (maximum === 0 || tickIndex < 0) {
 			tickIndex = 0;
