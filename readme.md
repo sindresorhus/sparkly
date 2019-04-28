@@ -26,8 +26,8 @@ sparkly([0, 3, 5, 8, 4, 3, 4, 10]);
 sparkly([0, 3, 5, '', 4, 3, 4, 10]);
 //=> '▁▃▄ ▄▃▄█'
 
-// Specifying a min max object will change the sparkline range
-sparkly([1, 2, 3, 4, 5], {min: 0, max: 10});
+// Specifying an object with minimum and maximum options will change the sparkline range
+sparkly([1, 2, 3, 4, 5], {minimum: 0, maximum: 10});
 //=> '▁▂▃▄▄'
 
 // Specifying a style option will change the sparkline color
@@ -50,15 +50,15 @@ Numbers to create the sparkline from.
 
 #### options
 
-Type: `Object`
+Type: `object`
 
-##### min
+##### minimum
 
 Type: `number`
 
 Minimum range.
 
-##### max
+##### maximum
 
 Type: `number`
 

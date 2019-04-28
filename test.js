@@ -30,11 +30,11 @@ test('use the lowest tick if data is all 0', t => {
 	t.is(sparkly([0, 0, 0, 0, 0]), '▁▁▁▁▁');
 });
 
-test('min and max arguments set graph range', t => {
-	t.is(sparkly([1], {min: 0, max: 1}), '█');
-	t.is(sparkly([1, 2, 3, 4, 5], {min: 0, max: 10}), '▁▂▃▄▄');
-	t.is(sparkly([10, 11, 12, 13], {min: 0}), '▇▇██');
-	t.is(sparkly([10, 20, 30, 40, 50], {max: 100}), '▁▂▃▄▄');
+test('minimum and maximum arguments set graph range', t => {
+	t.is(sparkly([1], {minimum: 0, maximum: 1}), '█');
+	t.is(sparkly([1, 2, 3, 4, 5], {minimum: 0, maximum: 10}), '▁▂▃▄▄');
+	t.is(sparkly([10, 11, 12, 13], {minimum: 0}), '▇▇██');
+	t.is(sparkly([10, 20, 30, 40, 50], {maximum: 100}), '▁▂▃▄▄');
 });
 
 test('colored graph', t => {
