@@ -1,4 +1,4 @@
-# ![sparkly](https://cloud.githubusercontent.com/assets/170270/4068189/1b47cab0-2e36-11e4-8b75-16b80330147e.gif) [![Build Status](https://travis-ci.org/sindresorhus/sparkly.svg?branch=master)](https://travis-ci.org/sindresorhus/sparkly)
+# ![sparkly](https://cloud.githubusercontent.com/assets/170270/4068189/1b47cab0-2e36-11e4-8b75-16b80330147e.gif)
 
 > Generate sparklines `▁▂▃▅▂▇`
 
