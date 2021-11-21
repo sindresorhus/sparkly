@@ -1,30 +1,28 @@
-declare namespace sparkly {
-	interface Options {
-		/**
-		Minimum range.
-		*/
-		readonly minimum?: number;
+interface Options {
+	/**
+	Minimum range.
+	*/
+	readonly minimum?: number;
 
-		/**
-		Maximum range.
-		*/
-		readonly maximum?: number;
+	/**
+	Maximum range.
+	*/
+	readonly maximum?: number;
 
-		/**
-		Style for the sparklines.
-		*/
-		readonly style?: 'fire';
-	}
+	/**
+	Style for the sparklines.
+	*/
+	readonly style?: 'fire';
 }
 
 /**
 Generate sparklines `▁▂▃▅▂▇`.
 
-@param numbers - Numbers to create the sparkline from.
+@param numbers - The numbers to create the sparkline from.
 
 @example
 ```
-const sparkly = require('sparkly');
+import sparkly from 'sparkly';
 
 sparkly([0, 3, 5, 8, 4, 3, 4, 10]);
 //=> '▁▃▄▇▄▃▄█'
@@ -38,9 +36,7 @@ sparkly([1, 2, 3, 4, 5], {minimum: 0, maximum: 10});
 //=> '▁▂▃▄▄'
 ```
 */
-declare function sparkly(
+export default function sparkly(
 	numbers: ReadonlyArray<number | ''>,
-	options?: sparkly.Options
+	options?: Options
 ): string;
-
-export = sparkly;

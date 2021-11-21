@@ -6,18 +6,16 @@ JavaScript port of [spark.sh](https://github.com/holman/spark).
 
 [Some cool use-cases.](https://github.com/holman/spark/wiki/Wicked-Cool-Usage)
 
-
 ## Install
 
+```sh
+npm install sparkly
 ```
-$ npm install sparkly
-```
-
 
 ## Usage
 
 ```js
-const sparkly = require('sparkly');
+import sparkly from 'sparkly';
 
 sparkly([0, 3, 5, 8, 4, 3, 4, 10]);
 //=> '▁▃▄▇▄▃▄█'
@@ -37,16 +35,15 @@ sparkly([1, 2, 3, 4, 5, 6, 7, 8], {style: 'fire'});
 
 <img src="screenshot.png" width="383">
 
-
 ## API
 
-### sparkly(numbers, [options])
+### sparkly(numbers, options?)
 
 #### numbers
 
 Type: `number[]`
 
-Numbers to create the sparkline from.
+The numbers to create the sparkline from.
 
 #### options
 
@@ -66,17 +63,11 @@ Maximum range.
 
 ##### style
 
-Type: `string`<br>
+Type: `string`\
 Values: `'fire'`
 
 Style for the sparklines.
 
-
 ## Related
 
 - [sparkly-cli](https://github.com/sindresorhus/sparkly-cli) - CLI for this module
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)

@@ -1,7 +1,6 @@
-'use strict';
-const chalk = require('chalk');
+import chalk from 'chalk';
 
-module.exports = (numbers, options = {}) => {
+export default function sparkly(numbers, options = {}) {
 	if (!Array.isArray(numbers)) {
 		throw new TypeError('Expected an array');
 	}
@@ -12,7 +11,7 @@ module.exports = (numbers, options = {}) => {
 	const minimum = typeof options.minimum === 'number' ? options.minimum : Math.min(...finiteNumbers);
 	const maximum = typeof options.maximum === 'number' ? options.maximum : Math.max(...finiteNumbers);
 
-	// Use a high tick if data is constant and max is not equal to 0
+	// Use a high tick if data is constant and max is not equal to 0.
 	if (minimum === maximum && maximum !== 0) {
 		ticks = [ticks[4]];
 	}
@@ -34,4 +33,4 @@ module.exports = (numbers, options = {}) => {
 
 		return ticks[tickIndex];
 	}).join('');
-};
+}

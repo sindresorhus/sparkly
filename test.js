@@ -1,6 +1,6 @@
 import test from 'ava';
 import chalk from 'chalk';
-import sparkly from '.';
+import sparkly from './index.js';
 
 chalk.level = 3;
 
@@ -19,7 +19,7 @@ test('creates graph', t => {
 });
 
 test('anything other than finite numbers causes holes', t => {
-	t.is(sparkly([1, '', 3, NaN, 5]), '▂ ▅ █');
+	t.is(sparkly([1, '', 3, Number.NaN, 5]), '▂ ▅ █');
 });
 
 test('use the middle tick if data is constant', t => {

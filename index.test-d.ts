@@ -1,5 +1,5 @@
 import {expectType} from 'tsd';
-import sparkly = require('.');
+import sparkly from './index.js';
 
 expectType<string>(sparkly([0, 3, 5, 8, 4, 3, 4, 10]));
 expectType<string>(sparkly([0, 3, 5, '', 4, 3, 4, 10]));
