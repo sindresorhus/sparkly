@@ -1,16 +1,26 @@
 interface Options {
 	/**
-	Minimum range.
+	Minimum value of the sparkline range.
+
+	Values are scaled relative to this baseline. When not specified:
+	- If `maximum` is set, defaults to `0` (for backwards compatibility)
+	- Otherwise, defaults to the minimum value in the data
 	*/
 	readonly minimum?: number;
 
 	/**
-	Maximum range.
+	Maximum value of the sparkline range.
+
+	Values are scaled relative to this maximum. When not specified, defaults to the maximum value in the data.
 	*/
 	readonly maximum?: number;
 
 	/**
-	Style for the sparklines.
+	Apply color styling to the sparklines.
+
+	The `'fire'` style uses a gradient from yellow to red. Each bar has a fixed width of one terminal column.
+
+	@default 'fire'
 	*/
 	readonly style?: 'fire';
 }
@@ -31,9 +41,17 @@ sparkly([0, 3, 5, 8, 4, 3, 4, 10]);
 sparkly([0, 3, 5, '', 4, 3, 4, 10]);
 //=> '▁▃▄ ▄▃▄█'
 
-// Specifying an object with minimum and maximum options will change the sparkline range
+// Specifying minimum and/or maximum options will change the sparkline range
 sparkly([1, 2, 3, 4, 5], {minimum: 0, maximum: 10});
 //=> '▁▂▃▄▄'
+
+// With only maximum set, minimum defaults to 0 for backwards compatibility
+sparkly([10, 20, 30, 40, 50], {maximum: 100});
+//=> '▁▂▃▄▄'
+
+// Specifying a style option will change the sparkline color
+sparkly([1, 2, 3, 4, 5, 6, 7, 8], {style: 'fire'});
+//=> Colored sparkline (gradient from yellow to red)
 ```
 */
 export default function sparkly(
